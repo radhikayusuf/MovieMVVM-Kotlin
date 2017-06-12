@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="radhika.yusuf.id.movie.ui.movie.MovieRowVM"/>
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+    <ImageView
+        android:id="@+id/row_movie_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:setImageUrl="@{vm.bImageUrl}"/>
+
+    <TextView
+        android:id="@+id/row_movie_title"
+        android:text="@{vm.bTitle}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFF"
+        android:background="#bb000000"/>
+</RelativeLayout>
+</layout>

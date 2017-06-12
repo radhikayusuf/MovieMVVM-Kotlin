@@ -1,0 +1,24 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="radhika.yusuf.id.movie.ui.movie.MovieVM"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="radhika.yusuf.id.movie.ui.movie.MovieFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_movie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{vm.adapter}"
+            app:layoutManager="@{vm.layoutManager}">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+</layout>
